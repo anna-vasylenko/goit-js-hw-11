@@ -134,6 +134,10 @@ button {
   color: #2e2f42;
 }
 
+.input-search:hover {
+  border: 1px solid #000;
+}
+
 .input-search:active,
 .input-search:focus {
   border: 1px solid #4e75ff;
@@ -152,6 +156,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
+  cursor: pointer;
 }
 .btn-search:hover {
   background-color: #6c8cff;
@@ -172,6 +177,9 @@ button {
 .gallery-item {
   width: 360px;
   height: 248px;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item > a {
@@ -188,11 +196,13 @@ button {
   width: 100%;
   height: auto;
   object-fit: contain;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .photo-dsc {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .photo-dsc > li {
