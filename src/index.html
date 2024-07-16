@@ -9,10 +9,18 @@
   </head>
   <body>
     <form class="form-search">
-      <input type="text" name="search-image" class="input-search" required />
-
+      <input
+        type="text"
+        name="search"
+        class="input-search"
+        placeholder="Search images..."
+      />
       <button class="btn-search" type="submit">Search</button>
     </form>
+    <div class="loader-box">
+      <span class="loader">Load&nbsp;ng</span>
+    </div>
+    <ul class="gallery-list"></ul>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
