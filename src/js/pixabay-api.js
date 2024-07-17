@@ -1,5 +1,5 @@
-export function fetchImages(searchValue) {
-  const URL = 'https://pixabay.com/api/';
+export function getImages(searchValue) {
+  const BASE_URL = 'https://pixabay.com/api/';
   const params = new URLSearchParams({
     key: '44962724-2fcdbdaf7fb299db2b6841432',
     q: searchValue,
@@ -8,7 +8,7 @@ export function fetchImages(searchValue) {
     safesearch: 'true',
   });
 
-  return fetch(`${URL}?${params}`).then(response => {
+  return fetch(`${BASE_URL}?${params}`).then(response => {
     if (!response.ok) {
       throw new Error(response.status);
     }

@@ -3,7 +3,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { renderMarkup } from './js/render-functions';
-import { fetchImages } from './js/pixabay-api';
+import { getImages } from './js/pixabay-api';
 
 export const refs = {
   formSearchEl: document.querySelector('.form-search'),
@@ -22,7 +22,7 @@ refs.formSearchEl.addEventListener('submit', e => {
   refs.galleryListEl.innerHTML = '';
   refs.loader.classList.remove('loader-hidden');
 
-  fetchImages(searchValue)
+  getImages(searchValue)
     .then(data => {
       if (data.hits.length === 0) {
         iziToast.error({
